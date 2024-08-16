@@ -78,7 +78,7 @@ const UserPage: React.FC = () => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/CWDaWz5_r5c" // Substitua YOUR_VIDEO_ID pelo ID do vídeo desejado
+            src="https://www.youtube.com/embed/vNh-ic7Acxc" // Substitua YOUR_VIDEO_ID pelo ID do vídeo desejado
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
