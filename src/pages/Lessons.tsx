@@ -18,12 +18,12 @@ interface VideoList {
 
 const videoList: VideoList = {
   "Risk Management & Trading Psychology": [
-    { title: "Introduction", videoId: "qc-5k57NN2A" },
+    { title: "Introduction", videoId: "K4Bn4xoQkNE" },
     { title: "Standard risk management", videoId: "zcUVp_08Hm4" },
     { title: "Advanced risk management", videoId: "IDGNmNTfcsU" }
   ],
   "Swing Trading": [
-    { title: "Swing Trading Basics", videoId: "video-id-swing-trading-basics" },
+    { title: "Swing Trading Basics", videoId: "K4Bn4xoQkNE" },
     { title: "Advanced Swing Trading Strategies", videoId: "video-id-advanced-swing-trading-strategies" }
   ],
   "Day Trading": [

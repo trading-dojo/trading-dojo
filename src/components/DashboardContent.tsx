@@ -26,43 +26,47 @@ const DashboardContent: React.FC = () => {
           <Link
             display="flex"
             alignItems="center"
-            color={isVideoWatched("qc-5k57NN2A") ? "gray.500" : "red.300"}
+            color={isVideoWatched("K4Bn4xoQkNE") ? "gray.500" : "red.300"}
             mb={2}
             p={2}
             borderRadius="md"
             bg="#1a202c"
             _hover={{ color: "#01baef" }}
-            onClick={() => handleLinkClick("Risk Management & Trading Psychology", "Introduction", "qc-5k57NN2A")}
+            onClick={() => handleLinkClick("Risk Management & Trading Psychology", "Introduction", "K4Bn4xoQkNE")}
           >
-            {isVideoWatched("qc-5k57NN2A") && <CheckCircleIcon color="green.400" mr={2} />}
+            {isVideoWatched("K4Bn4xoQkNE") && <CheckCircleIcon color="green.400" mr={2} />}
             Introduction
           </Link>
+
+
           <Link
             display="flex"
             alignItems="center"
-            color={isVideoWatched("video-id-standard-risk-management") ? "gray.500" : "red.300"}
+            color={isVideoWatched("zcUVp_08Hm4") ? "gray.500" : "red.300"}
             mb={2}
             p={2}
             borderRadius="md"
             bg="#1a202c"
             _hover={{ color: "#01baef" }}
-            onClick={() => handleLinkClick("Risk Management & Trading Psychology", "Standard risk management", "video-id-standard-risk-management")}
+            onClick={() => handleLinkClick("Risk Management & Trading Psychology", "Standard risk management", "zcUVp_08Hm4")}
           >
-            {isVideoWatched("video-id-standard-risk-management") && <CheckCircleIcon color="green.400" mr={2} />}
+            {isVideoWatched("zcUVp_08Hm4") && <CheckCircleIcon color="green.400" mr={2} />}
             Standard risk management
           </Link>
+
+
           <Link
             display="flex"
             alignItems="center"
-            color={isVideoWatched("video-id-advanced-risk-management") ? "gray.500" : "red.300"}
+            color={isVideoWatched("IDGNmNTfcsU") ? "gray.500" : "red.300"}
             mb={2}
             p={2}
             borderRadius="md"
             bg="#1a202c"
             _hover={{ color: "#01baef" }}
-            onClick={() => handleLinkClick("Risk Management & Trading Psychology", "Advanced risk management", "video-id-advanced-risk-management")}
+            onClick={() => handleLinkClick("Risk Management & Trading Psychology", "Advanced risk management", "IDGNmNTfcsU")}
           >
-            {isVideoWatched("video-id-advanced-risk-management") && <CheckCircleIcon color="green.400" mr={2} />}
+            {isVideoWatched("IDGNmNTfcsU") && <CheckCircleIcon color="green.400" mr={2} />}
             Advanced risk management
           </Link>
         </Box>
