@@ -71,7 +71,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("K4Bn4xoQkNE") ? "white" : "red.300"}
+              color={isVideoWatched("K4Bn4xoQkNE") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -94,7 +94,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("X5M3uH4y0kP") ? "white" : "red.300"}
+              color={isVideoWatched("X5M3uH4y0kP") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -118,7 +118,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("X5M3uH4y0kP") ? "white" : "red.300"}
+              color={isVideoWatched("X5M3uH4y0kP") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -142,7 +142,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("X5M3uH4y0kP") ? "white" : "red.300"}
+              color={isVideoWatched("X5M3uH4y0kP") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -192,7 +192,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-swing-trading-basics") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-swing-trading-basics") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -215,7 +215,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -239,7 +239,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -263,7 +263,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -313,7 +313,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-day-trading-basics") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-day-trading-basics") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -336,7 +336,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -360,7 +360,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -384,7 +384,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -407,7 +407,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -457,7 +457,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-introduction") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-introduction") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -480,7 +480,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-syntax") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-syntax") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -503,7 +503,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -527,7 +527,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -551,7 +551,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -602,7 +602,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-introduction") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-introduction") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -626,7 +626,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-syntax") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-syntax") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -650,7 +650,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -675,7 +675,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -729,7 +729,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-introduction") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-introduction") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -752,7 +752,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-syntax") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-syntax") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -775,7 +775,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
@@ -799,7 +799,7 @@ const DashboardContent: React.FC = () => {
             <Link
               display="flex"
               alignItems="center"
-              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "red.300"}
+              color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
               mb={2}
               p={4}
               borderRadius="md"
