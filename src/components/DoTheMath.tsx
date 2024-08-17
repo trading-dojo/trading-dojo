@@ -36,30 +36,31 @@ const DoTheMath: React.FC = () => {
         {/* Primeiro item */}
         <Box textAlign="center" flex="1">
           <Text fontSize={isMobile ? "3xl" : "5xl"} fontWeight="bold" color="#01baef">
-            150,000+
+          10,000,000+
           </Text>
           <Text fontSize={isMobile ? "lg" : "xl"}>
-            reputation points on TradingView – the biggest trading-related website in the world.
+          In Funding Achieved by-Trading DOJO Students
           </Text>
         </Box>
 
         {/* Segundo item */}
         <Box textAlign="center" flex="1">
           <Text fontSize={isMobile ? "3xl" : "5xl"} fontWeight="bold" color="#01baef">
-            107
+          3,000,000+
           </Text>
           <Text fontSize={isMobile ? "lg" : "xl"}>
-            countries from which our students all across the world come.
+          In Funding Achieved by-Trading DOJO Mentors
           </Text>
         </Box>
 
         {/* Terceiro item */}
         <Box textAlign="center" flex="1">
           <Text fontSize={isMobile ? "3xl" : "5xl"} fontWeight="bold" color="#01baef">
-            2,800+
+            2,200+
           </Text>
           <Text fontSize={isMobile ? "lg" : "xl"}>
-            students have graduated at the Transparent FX Academy.
+          Diverse Students from all around the World
+
           </Text>
         </Box>
       </Box>

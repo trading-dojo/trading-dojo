@@ -17,22 +17,43 @@ interface VideoList {
 }
 
 const videoList: VideoList = {
-  "Risk Management & Trading Psychology": [
-    { title: "Introduction", videoId: "K4Bn4xoQkNE" },
-    { title: "Standard risk management", videoId: "zcUVp_08Hm4" },
-    { title: "Advanced risk management", videoId: "IDGNmNTfcsU" }
+ "Trading Psychology": [
+    { title: "Intro to psychology video", videoId: "video-id-intro-to-psychology" },
+    { title: "Gamblers Mindset", videoId: "video-id-gamblers-mindset" },
+    { title: "Proper Trade Journaling", videoId: "video-id-proper-trade-journaling" },
+    { title: "Benefits of one pair, one session, one model", videoId: "video-id-benefits-one-pair" }
   ],
-  "Swing Trading": [
-    { title: "Swing Trading Basics", videoId: "K4Bn4xoQkNE" },
-    { title: "Advanced Swing Trading Strategies", videoId: "video-id-advanced-swing-trading-strategies" }
+  "Risk Management": [
+    { title: "Intro to risk management", videoId: "video-id-intro-to-risk-management" },
+    { title: "Calculating risk per trade", videoId: "video-id-calculating-risk" },
+    { title: "Overtrading", videoId: "video-id-overtrading" },
+    { title: "Risk management on scalp positions & swing positions", videoId: "video-id-risk-management-scalp" }
   ],
-  "Day Trading": [
-    { title: "Day Trading Strategies", videoId: "video-id-day-trading-strategies" },
-    { title: "Day Trading Psychology", videoId: "video-id-day-trading-psychology" }
+  "Price Action": [
+    { title: "Intro to price action", videoId: "video-id-intro-to-price-action" },
+    { title: "Intro to swing trading", videoId: "video-id-intro-to-swing-trading" },
+    { title: "Intro to intraday scalping", videoId: "video-id-intro-to-intraday-scalping" },
+    { title: "Why support & resistance is flawed", videoId: "video-id-support-resistance-flawed" },
+    { title: "What pairs / currencies for the session you choose", videoId: "video-id-pairs-currencies" }
   ],
-  "MQL4 Programming Course on Automated Algorithmic Trading": [
-    { title: "MQL4 Basics", videoId: "video-id-mql4-basics" },
-    { title: "Advanced MQL4 Programming", videoId: "video-id-advanced-mql4-programming" }
+  "New York Session": [
+    { title: "Intro to our new york session models", videoId: "video-id-intro-ny-session" },
+    { title: "Expansion Model", videoId: "video-id-expansion-model" },
+    { title: "Silver Bullet Model", videoId: "video-id-silver-bullet-model" },
+    { title: "Lunch Raid Model", videoId: "video-id-lunch-raid-model" },
+    { title: "PM Rush Hour Close Model", videoId: "video-id-pm-rush-hour-close" }
+  ],
+  "London Session": [
+    { title: "Intro to our london session models - 15 mins (time aspects, macros, killzone, midnight open, judas & 3am silver bullet)", videoId: "video-id-intro-london-session" },
+    { title: "Catching The Judas Model", videoId: "video-id-catching-judas-model" },
+    { title: "Silver Bullet Model", videoId: "video-id-silver-bullet-model-london" },
+    { title: "Previous Session Liquidity", videoId: "video-id-previous-session-liquidity" }
+  ],
+  "Tokyo Session": [
+    { title: "Intro to our Asia session models", videoId: "video-id-intro-asia-session" },
+    { title: "Catching The Daily Candle Expansion", videoId: "video-id-daily-candle-expansion" },
+    { title: "Asia Session Breaker Model", videoId: "video-id-asia-session-breaker" },
+    { title: "How to identify direction of the daily candle expansion", videoId: "video-id-identify-candle-direction" }
   ]
 };
 

@@ -14,6 +14,8 @@ import VideoGallery from "../components/VideoGallery";
 import PromotionCard from "../components/PromotionCard";
 import RiskNotice from "../components/RiskNotice";
 import Footer from "../components/Footer";
+import ResultsSection from "../components/ImageGallery";
+import ImageGallery from "../components/ImageGallery";
 
 const HomePage: React.FC = () => {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
@@ -163,12 +165,17 @@ const HomePage: React.FC = () => {
         <DoTheMath />
 
         <StudentTestimonials />
+        
 
-        <VideoGallery />
+        {/* <VideoGallery /> */}
+
+        
 
         <Box ref={promotionCardRef} width="100%">
           <PromotionCard />
         </Box>
+
+        <ImageGallery/>
 
         <RiskNotice />
 

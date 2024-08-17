@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Button, IconButton, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AutenticacaoContexto";
-import { FaUser } from "react-icons/fa";
 import logo from "../components/images/logo (2).png";
 import DashboardContent from "../components/DashboardContent";
 import Footer from "../components/Footer";
@@ -33,7 +32,7 @@ const UserPage: React.FC = () => {
         p={2}
         height="60px"
         display="flex"
-        flexDirection={{ base: "column", md: "row" }}
+        flexDirection={{ base: "row", md: "row" }}
         justifyContent="space-between"
         alignItems="center"
         zIndex={1}
@@ -44,17 +43,15 @@ const UserPage: React.FC = () => {
           boxSize={{ base: "150px", md: "200px" }}
           objectFit="contain"
         />
-        <Box display="flex" alignItems="center" flexDirection={{ base: "column", md: "row" }}>
-          <Button
-            colorScheme="red"
-            variant="solid"
-            onClick={handleLogout}
-            ml={{ base: 0, md: 4 }}
-            mr="70px"
-          >
-            Logout
-          </Button>
-        </Box>
+        <Button
+          colorScheme="red"
+          variant="solid"
+          onClick={handleLogout}
+          ml="auto" // Move o botão para o extremo direito
+          fontSize={{ base: "sm", md: "md" }} // Ajusta o tamanho do texto conforme a tela diminui
+        >
+          Logout
+        </Button>
       </Box>
 
       <Box
@@ -85,12 +82,10 @@ const UserPage: React.FC = () => {
             allowFullScreen
           ></iframe>
         </Box>
-        <Text fontSize={{ base: "md", md: "lg" }} color="white" mb={6}>
-          Bem-vindo à página do Usuário
-        </Text>
+
         <DashboardContent />
 
-        <Footer/>
+        <Footer />
       </Box>
     </Box>
   );

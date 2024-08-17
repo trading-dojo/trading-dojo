@@ -73,7 +73,7 @@ const VideoGallery: React.FC = () => {
       minHeight="100vh"
     >
       <Box
-        width={isMobile ? "100%" : "80%"}
+        width={isMobile ? "100%" : "100%"}
         maxWidth="1200px"
         display="grid"
         gridTemplateColumns={isMobile ? "repeat(2, 1fr)" : isTablet ? "repeat(2, 1fr)" : "repeat(3, 1fr)"}

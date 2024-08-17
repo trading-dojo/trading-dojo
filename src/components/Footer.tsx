@@ -25,11 +25,9 @@ const Footer: React.FC = () => {
           />
           <Box textAlign={["center", "center", "left"]} fontSize="sm">
             <UnorderedList spacing={2} styleType="disc" ml={4}>
-              <ListItem>TFX EDUCATION LTD</ListItem>
-              <ListItem>LEVEL 2, THE FORUM, CONSTITUTION STREET</ListItem>
-              <ListItem>MOSTA, MST 9051, MALTA</ListItem>
-              <ListItem>C98978, MT28159617</ListItem>
-              <ListItem>info@transparentfxtrading.com</ListItem>
+              <ListItem>The Trading Dojo</ListItem>
+              <ListItem>LEVEL 2</ListItem>
+              <ListItem>thetradingdojovip@gmail.com</ListItem>
             </UnorderedList>
           </Box>
         </Flex>
