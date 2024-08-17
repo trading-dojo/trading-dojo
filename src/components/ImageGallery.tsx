@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, useBreakpointValue, IconButton, Image, Text, Heading } from "@chakra-ui/react";
+import { Box, IconButton, Image, Text, Heading } from "@chakra-ui/react";
 import { FaCircle, FaCircleNotch } from "react-icons/fa";
 
 // Importar imagens diretamente
@@ -10,48 +10,20 @@ import photo4 from "./images/photo4.jpg";
 import photo5 from "./images/photo5.jpg";
 import photo6 from "./images/photo6.jpg";
 import photo7 from "./images/photo7.jpg";
-import photo8 from "./images/photo8.jpg";
-import photo9 from "./images/photo9.jpg";
-import photo10 from "./images/photo10.jpg";
-import photo11 from "./images/photo11.jpg";
-import photo12 from "./images/photo12.jpg";
-import photo13 from "./images/photo13.jpg";
-import photo14 from "./images/photo14.jpg";
-import photo15 from "./images/photo15.jpg";
-import photo16 from "./images/photo16.jpg";
-import photo17 from "./images/photo17.jpg";
-import photo18 from "./images/photo18.jpg";
-import photo19 from "./images/photo19.jpg";
-import photo20 from "./images/photo20.jpg";
 
 const ImageGallery: React.FC = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false });
-  const isTablet = useBreakpointValue({ base: false, md: true, lg: false });
-
   const [currentPage, setCurrentPage] = useState(0);
   const imagesPerPage = 4;
 
+  // Reorganizando para que as últimas 3 imagens estejam na primeira página
   const imageUrls = [
-    photo1,
-    photo2,
-    photo3,
-    photo4,
     photo5,
     photo6,
+    photo3,
     photo7,
-    photo8,
-    photo9,
-    photo10,
-    photo11,
-    photo12,
-    photo13,
-    photo14,
-    photo15,
-    photo16,
-    photo17,
-    photo18,
-    photo19,
-    photo20,
+    photo1,
+    photo4,
+    photo2,
   ];
 
   const totalPages = Math.ceil(imageUrls.length / imagesPerPage);
@@ -82,10 +54,10 @@ const ImageGallery: React.FC = () => {
       </Heading>
       
       <Box
-        width={isMobile ? "100%" : "80%"}
-        maxWidth="1200px"
+        width="100%"
+        maxWidth="1000px"
         display="grid"
-        gridTemplateColumns={isMobile ? "repeat(2, 1fr)" : isTablet ? "repeat(2, 1fr)" : "repeat(4, 1fr)"}
+        gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
         gap={4}
         justifyItems="center"
       >
@@ -96,8 +68,8 @@ const ImageGallery: React.FC = () => {
             overflow="hidden"
             boxShadow="lg"
             width="100%"
-            height="200px"
-            border="2px solid rgba(255, 255, 255, 0.7)"
+            maxWidth="450px"  // Reduzido o tamanho das imagens
+            height="auto"
             bg="rgba(0, 0, 0, 0.5)"
             _hover={{
               bg: "rgba(0, 0, 0, 0.7)"
@@ -107,9 +79,8 @@ const ImageGallery: React.FC = () => {
               src={src}
               alt={`Gallery Image ${index + 1}`}
               width="100%"
-              height="100%"
-              objectFit="cover"
-              borderRadius="md"
+              height="auto"
+              objectFit="contain"
             />
           </Box>
         ))}
@@ -139,7 +110,7 @@ const ImageGallery: React.FC = () => {
       </Box>
 
       <Box
-        width={isMobile ? "100%" : "80%"}
+        width="100%"
         maxWidth="1200px"
         textAlign="center"
         mt={10}

@@ -18,7 +18,7 @@ const pulseAnimation = keyframes`
 
 const PromotionCard: React.FC = () => {
   const handleButtonClick = () => {
-    window.location.href = "https://buy.stripe.com/6oEeWW4SP0Kh1DWaEY";
+    window.location.href = "https://whop.com/thetradingdojo/";
   };
 
   return (
