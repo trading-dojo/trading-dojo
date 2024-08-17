@@ -20,8 +20,8 @@ const LoginPopup: React.FC<LoginPopupProps> = ({ onClose }) => {
       onClose();
     } catch (error) {
       toast({
-        title: "Erro ao fazer login",
-        description: "Verifique suas credenciais e tente novamente.",
+        title: "Error logging in",
+        description: "Confirm your credentials and try again",
         status: "error",
         duration: 5000,
         isClosable: true,

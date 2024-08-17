@@ -72,10 +72,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("K4Bn4xoQkNE") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Trading Psychology", "Intro to psychology video", "K4Bn4xoQkNE")}
               width="100%"
@@ -88,6 +89,7 @@ const DashboardContent: React.FC = () => {
                 mr={2}
                 borderRadius="full"
                 borderWidth={isVideoWatched("K4Bn4xoQkNE") ? "0" : "2px"}
+                
               />
               Intro to psychology video 
             </Link>
@@ -95,10 +97,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("X5M3uH4y0kP") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Trading Psychology", "Gamblers Mindset", "X5M3uH4y0kP")}
               width="100%"
@@ -119,10 +122,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("X5M3uH4y0kP") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Trading Psychology", "Proper Trade Journaling", "X5M3uH4y0kP")}
               width="100%"
@@ -143,10 +147,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("X5M3uH4y0kP") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Trading Psychology", "Benefits of one pair, one session, one model", "X5M3uH4y0kP")}
               width="100%"
@@ -193,10 +198,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-swing-trading-basics") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Risk Management", "Intro to risk management", "video-id-swing-trading-basics")}
               width="100%"
@@ -216,10 +222,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Risk Management", "Calculating risk per trade", "video-id-swing-trading-strategies")}
               width="100%"
@@ -240,10 +247,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Risk Management", "Overtrading", "video-id-swing-trading-strategies")}
               width="100%"
@@ -264,10 +272,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-swing-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Risk Management", "Risk management on scalp positions & swing positions", "video-id-swing-trading-strategies")}
               width="100%"
@@ -314,10 +323,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-day-trading-basics") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Price Action", "Intro to price action", "video-id-day-trading-basics")}
               width="100%"
@@ -337,10 +347,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Price Action", "Intro to swing trading", "video-id-day-trading-strategies")}
               width="100%"
@@ -361,10 +372,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Price Action", "Intro to intraday scalping", "video-id-day-trading-strategies")}
               width="100%"
@@ -385,10 +397,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Price Action", "Why support & resistance is flawed", "video-id-day-trading-strategies")}
               width="100%"
@@ -408,10 +421,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-day-trading-strategies") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Price Action", "What pairs / currencies for the session you choose", "video-id-day-trading-strategies")}
               width="100%"
@@ -458,10 +472,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-introduction") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("New York Session", "Intro to our new york session models", "video-id-mql4-introduction")}
               width="100%"
@@ -481,10 +496,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-syntax") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("New York Session", "Expansion Model", "video-id-mql4-syntax")}
               width="100%"
@@ -504,10 +520,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("New York Session", "Silver Bullet Model", "video-id-mql4-strategy")}
               width="100%"
@@ -528,10 +545,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("New York Session", "Lunch Raid Model", "video-id-mql4-strategy")}
               width="100%"
@@ -552,10 +570,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("New York Session", "PM Rush Hour Close Model", "video-id-mql4-strategy")}
               width="100%"
@@ -603,10 +622,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-introduction") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("London Session", "Intro to our london session models - 15 mins (time aspects, macros, killzone, midnight open, judas & 3am silver bullet)", "video-id-mql4-introduction")}
               width="100%"
@@ -627,10 +647,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-syntax") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("London Session", "Catching The Judas Model", "video-id-mql4-syntax")}
               width="100%"
@@ -651,10 +672,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("London Session", "Silver Bullet Model", "video-id-mql4-strategy")}
               width="100%"
@@ -676,10 +698,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("London Session", "Previous Session Liquidity", "video-id-mql4-strategy")}
               width="100%"
@@ -730,10 +753,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-introduction") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Tokyo Session", "Intro to our Asia session models", "video-id-mql4-introduction")}
               width="100%"
@@ -753,10 +777,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-syntax") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Tokyo Session", "Catching The Daily Candle Expansion", "video-id-mql4-syntax")}
               width="100%"
@@ -776,10 +801,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Tokyo Session", "Asia Session Breaker Model", "video-id-mql4-strategy")}
               width="100%"
@@ -800,10 +826,11 @@ const DashboardContent: React.FC = () => {
               display="flex"
               alignItems="center"
               color={isVideoWatched("video-id-mql4-strategy") ? "white" : "white"}
+              fontSize="18px"
               mb={2}
               p={4}
               borderRadius="md"
-              bg="#2d3748"
+              bg="#0b0e13"
               _hover={{ color: "#01baef" }}
               onClick={() => handleLinkClick("Tokyo Session", "How to identify direction of the daily candle expansion", "video-id-mql4-strategy")}
               width="100%"
