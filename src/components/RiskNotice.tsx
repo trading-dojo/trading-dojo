@@ -1,20 +1,6 @@
 import React, { useState } from "react";
 import { Box, Text, VStack, Divider, Button } from "@chakra-ui/react";
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import { keyframes } from "@emotion/react";
-
-// Animação de pular para cima e para baixo
-const bounceAnimation = keyframes`
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-`;
 
 const RiskNotice: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -84,21 +70,9 @@ const RiskNotice: React.FC = () => {
             colorScheme="red"
             onClick={toggleExpand}
             _hover={{ textDecoration: "underline" }}
-            position="relative"
-            _after={{
-              content: `"◄"`,
-              display: "inline-block",
-              animation: `${bounceAnimation} 1s infinite`,
-              marginRight: "8px",
-            }}
-            _before={{
-              content: `"►"`,
-              display: "inline-block",
-              animation: `${bounceAnimation} 1s infinite`,
-              marginLeft: "8px",
-            }}
           >
             {isExpanded ? "See Less" : "See More"} 
+          
           </Button>
         </Box>
       </VStack>
