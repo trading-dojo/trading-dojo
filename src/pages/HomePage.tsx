@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Box, Image, Text, Button, useBreakpointValue, IconButton, Tooltip } from "@chakra-ui/react";
-import { FaTelegramPlane, FaDiscord, FaYoutube, FaInstagram, FaArrowUp } from "react-icons/fa";
+import { FaTelegramPlane, FaDiscord, FaYoutube, FaArrowUp,FaInstagram } from "react-icons/fa";
 import img1 from "../components/images/Website-Banner-graph.jpg";
 import LoginPopup from "../components/LoginPopup";
 import TermsPopup from "../components/TermsPopup";
@@ -16,6 +16,10 @@ import RiskNotice from "../components/RiskNotice";
 import Footer from "../components/Footer";
 import ResultsSection from "../components/ImageGallery";
 import ImageGallery from "../components/ImageGallery";
+import { motion, useAnimation } from "framer-motion";
+
+const MotionText = motion(Text);
+const MotionButton = motion(Button);
 
 const HomePage: React.FC = () => {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
@@ -43,6 +47,14 @@ const HomePage: React.FC = () => {
   const bannerPadding = useBreakpointValue({ base: "2", md: "4" });
   const bannerTop = useBreakpointValue({ base: "20%", md: "30%" });
   const bannerLeft = useBreakpointValue({ base: "5%", md: "10%", lg: "15%" });
+
+  // Controle da animação
+  const controls = useAnimation();
+
+  // Inicia a animação quando o componente está no viewport
+  React.useEffect(() => {
+    controls.start({ opacity: 1, y: 0 });
+  }, [controls]);
 
   return (
     <div ref={homeRef}> {/* Referência ao topo da página */}
@@ -91,23 +103,41 @@ const HomePage: React.FC = () => {
           width="auto"
           maxWidth="400px"
         >
-          <Text fontSize={bannerTextSize} fontWeight="bold" mb={4} textAlign="left">
+          <MotionText
+            fontSize={bannerTextSize}
+            fontWeight="bold"
+            mb={4}
+            textAlign="left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            transition={{ duration: 2, delay: 0.2 }} // Animação mais lenta
+          >
             <span style={{ color: "white" }}>Join the best </span>
             <span style={{ color: "#ff4d4d" }}>smart money</span>
-            <span style={{ color: "white" }}>  community in the <span style={{ color: "#ff4d4d" }}>world</span></span>
-          </Text>
-          <Text fontSize="lg" mb={4} color="white">
+            <span style={{ color: "white" }}> community in the <span style={{ color: "#ff4d4d" }}>world</span></span>
+          </MotionText>
+          <MotionText
+            fontSize="lg"
+            mb={4}
+            color="white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            transition={{ duration: 2, delay: 0.4 }} // Animação mais lenta
+          >
             Don’t fall for the get rich quick schemes!
-          </Text>
-          <Button
+          </MotionText>
+          <MotionButton
             color="#ffffff"
             bg="#ff4d4d"
             variant="solid"
             size={bannerButtonSize}
             onClick={scrollToPromotionCard}
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            transition={{ duration: 2, delay: 0.6 }} // Animação mais lenta para o botão
           >
             Find out more
-          </Button>
+          </MotionButton>
         </Box>
       </Box>
 
@@ -237,26 +267,13 @@ const HomePage: React.FC = () => {
             aria-label="Telegram"
             icon={<FaTelegramPlane />}
             size="lg"
-            color="#0195bf"
+            color="#0088cc"
             bg="transparent"
             _hover={{ color: "#ff4d4d" }}
             mb={2}
           />
         </Tooltip>
-        <Tooltip label="YouTube" placement="left" hasArrow>
-          <IconButton
-            as="a"
-            href="https://www.youtube.com/@TheTradingDojo"
-            target="_blank"
-            aria-label="YouTube"
-            icon={<FaYoutube />}
-            size="lg"
-            color="red"
-            bg="transparent"
-            _hover={{ color: "#ff4d4d" }}
-            mb={2}
-          />
-        </Tooltip>
+
         <Tooltip label="Instagram" placement="left" hasArrow>
           <IconButton
             as="a"
@@ -268,6 +285,22 @@ const HomePage: React.FC = () => {
             color="purple"
             bg="transparent"
             _hover={{ color: "#ff4d4d" }}
+          />
+        </Tooltip>
+
+
+        <Tooltip label="YouTube" placement="left" hasArrow>
+          <IconButton
+            as="a"
+            href="https://www.youtube.com/channel/UCA9-QoaGf6wRskd5DlU3Ojw"
+            target="_blank"
+            aria-label="YouTube"
+            icon={<FaYoutube />}
+            size="lg"
+            color="red"
+            bg="transparent"
+            _hover={{ color: "#ff4d4d" }}
+            mb={2}
           />
         </Tooltip>
       </Box>

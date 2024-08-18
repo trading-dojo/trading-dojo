@@ -5,7 +5,7 @@ import logo from "./images/logo (2).png"; // Substitua pelo caminho correto da i
 
 const Footer: React.FC = () => {
   return (
-    <Box bg="black" color="white" py={10} px={6}>
+    <Box bg="#black" color="white" py={10} px={6}>
       <Grid
         maxWidth="1200px"
         mx="auto"
