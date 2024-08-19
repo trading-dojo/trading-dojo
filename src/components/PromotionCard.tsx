@@ -52,7 +52,7 @@ const PromotionCard: React.FC = () => {
         overflow="hidden"
       >
         <Text fontSize={["xl", "2xl", "3xl"]} fontWeight="bold" mb={6} color="white">
-          Get <span style={{ color: "#ff4d4d" }}> Lifetime Access</span> to the TransparentFX Mentorship Program
+          Get <span style={{ color: "#ff4d4d" }}> Lifetime Access</span> to the Trading Dojo Mentorship Program
         </Text>
 
         <Box textAlign="center">
