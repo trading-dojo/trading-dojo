@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text, Button, keyframes, Flex } from "@chakra-ui/react";
 import { FaTelegramPlane } from "react-icons/fa";
-import img1 from "./images/image.png";
+import img1 from "./images/back.jpg";
 
 // Define the pulse animation using Chakra UI's keyframes utility
 const pulseAnimation = keyframes`
