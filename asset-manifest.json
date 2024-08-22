@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.js": "/static/js/main.3eaa046d.js",
+    "main.js": "/static/js/main.f73eeef1.js",
+    "static/media/background.jpg": "/static/media/background.abbaf64ecbbb6f963835.jpg",
     "static/media/photo6.jpg": "/static/media/photo6.f75da998d6fb8bce1a70.jpg",
     "static/media/Website-Banner-graph.jpg": "/static/media/Website-Banner-graph.ef70e70fcb23f1482c49.jpg",
     "static/media/icone.png": "/static/media/icone.bd4599d0feff33fad03e.png",
     "static/media/photo7.jpg": "/static/media/photo7.ba50b82c11fe3ed41212.jpg",
+    "static/media/cert4.jpg": "/static/media/cert4.fb56a0290d7e742ddf7e.jpg",
+    "static/media/cert3.jpg": "/static/media/cert3.a4e36a5834ca1824d73e.jpg",
     "static/media/back.jpg": "/static/media/back.6649e2072f695a41e43b.jpg",
-    "static/media/photo4.jpg": "/static/media/photo4.08a66561cb49dc6e68d8.jpg",
+    "static/media/cert2.jpg": "/static/media/cert2.16a982009d0c7bba6282.jpg",
+    "static/media/cert1.jpg": "/static/media/cert1.3d619b70ed39fb8ca788.jpg",
     "static/media/logo (2).png": "/static/media/logo (2).7a608a77dd3fc3caca77.png",
     "static/media/Survimo-FAQ-3.png": "/static/media/Survimo-FAQ-3.33c3c5b626124a956ab2.png",
-    "static/media/photo1.jpg": "/static/media/photo1.75b30d0a95f58d9af7ad.jpg",
     "static/media/photo3.jpg": "/static/media/photo3.58014ffea9f8504023b6.jpg",
     "static/media/photo5.jpg": "/static/media/photo5.8f256a917f9254173f32.jpg",
     "static/media/photo2.jpg": "/static/media/photo2.051f44559294b2272091.jpg",
+    "static/media/photo10.jpg": "/static/media/photo10.2c78d6c3b9a75b8addd8.jpg",
     "index.html": "/index.html",
-    "main.3eaa046d.js.map": "/static/js/main.3eaa046d.js.map"
+    "main.f73eeef1.js.map": "/static/js/main.f73eeef1.js.map"
   },
   "entrypoints": [
-    "static/js/main.3eaa046d.js"
+    "static/js/main.f73eeef1.js"
   ]
 }
