@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Box, Image, Text, Button, useBreakpointValue, IconButton, Tooltip } from "@chakra-ui/react";
 import { FaTelegramPlane, FaDiscord, FaYoutube, FaArrowUp,FaInstagram } from "react-icons/fa";
-import img1 from "../components/images/Website-Banner-graph.jpg";
+import img1 from "../components/images/background.jpg";
 import LoginPopup from "../components/LoginPopup";
 import TermsPopup from "../components/TermsPopup";
 import logo from "../components/images/logo (2).png";
