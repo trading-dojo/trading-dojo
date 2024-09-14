@@ -48,7 +48,7 @@ const ContactUs: React.FC = () => {
         marginTop="170px"
         >
 
-        <RiskNotice/>
+        {/* <RiskNotice/> */}
         </Box>
       
       <Footer/>
