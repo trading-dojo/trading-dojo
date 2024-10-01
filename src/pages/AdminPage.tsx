@@ -12,11 +12,14 @@ const AdminPage: React.FC = () => {
   const handleLogout = () => {
     logout();
     navigate("/");
+
+
   };
 
   return (
     <Box
       position="relative"
+      
       width="100%"
       height="100vh"
       backgroundColor="#000000"
