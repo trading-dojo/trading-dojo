@@ -188,6 +188,8 @@ const HomePage: React.FC = () => {
         </Box>
         <VideoSection videoId="R_wXwRIddgo" />
 
+       
+
         <Lifetime />
 
         <ExclusiveAccess />

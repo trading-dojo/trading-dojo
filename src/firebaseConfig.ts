@@ -4,13 +4,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCjKThhjfzr8N-TlHcYcYJdg1hRJHoP55Y",
-    authDomain: "trading-dojo.firebaseapp.com",
-    projectId: "trading-dojo",
-    storageBucket: "trading-dojo.appspot.com",
-    messagingSenderId: "1054138391403",
-    appId: "1:1054138391403:web:37c690ca9598330aecca2e",
-    measurementId: "G-FD6T57PW5M"
+    apiKey: "AIzaSyBYjbf5rR7idI7xjx6GjEReQj1jK4IScMw",
+  authDomain: "trading-dojo-ddb74.firebaseapp.com",
+  projectId: "trading-dojo-ddb74",
+  storageBucket: "trading-dojo-ddb74.appspot.com",
+  messagingSenderId: "42974078436",
+  appId: "1:42974078436:web:97533c91923f26cb51d3f1"
 };
 
 const app = initializeApp(firebaseConfig);
