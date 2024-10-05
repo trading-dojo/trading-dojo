@@ -96,7 +96,7 @@ const PromotionCard: React.FC = () => {
           size="lg"
           borderRadius="full"
           animation={`${pulseAnimation} 1.5s infinite`}
-          _hover={{ bg: "teal.400" }}
+          _hover={{ bg: "black" }}
           onClick={handleButtonClick}
         >
           Get Access Now
@@ -133,6 +133,7 @@ const PromotionCard: React.FC = () => {
           bg="#ff4d4d"
           variant="solid"
           size="sm"
+          _hover={{ bg: "white", color: "black" }}
         >
           JOIN NOW
         </Button>

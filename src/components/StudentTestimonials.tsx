@@ -21,10 +21,12 @@ const StudentTestimonials: React.FC = () => {
         What our best students have to say...
       </Text>
 
-      {/* Texto */}
+      {/* Texto com borda */}
       <Box
         maxWidth="800px" // Limita a largura do texto
         margin="auto" // Centraliza o box
+        padding={4}
+        border="1px dashed grey" // Borda estilizada mais fina com traços
       >
         <Text fontSize={isMobile ? "md" : "lg"} mb={6}>
           The results you should generally expect to achieve based on historical available data (per the studies shown below) suggest that you will lose money. At a minimum, these studies indicate at least 50% of our students will not be profitable. Also, some of our students providing testimonials have received a small refund (up to 7% of the course programme fees) after they sent us their testimonial as a sign of our appreciation.

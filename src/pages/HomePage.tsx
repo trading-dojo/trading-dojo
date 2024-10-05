@@ -14,9 +14,11 @@ import VideoGallery from "../components/VideoGallery";
 import PromotionCard from "../components/PromotionCard";
 import RiskNotice from "../components/RiskNotice";
 import Footer from "../components/Footer";
-import ResultsSection from "../components/ImageGallery";
+// import ResultsSection from "../components/ImageGallery";
 import ImageGallery from "../components/ImageGallery";
 import { motion, useAnimation } from "framer-motion";
+import { FaUser } from "react-icons/fa";
+
 
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
@@ -73,10 +75,28 @@ const HomePage: React.FC = () => {
         >
           <Image src={logo} alt="Logo" boxSize="200px" objectFit="contain" />
           <Box display="flex">
-            <Button colorScheme="red" variant="solid" onClick={openLoginModal} mr={2}>
-              Login
+          <Button
+                colorScheme="red"
+                variant="solid"
+                onClick={openLoginModal}
+                mr={2}
+                width="100px" 
+                height="35px"
+                borderRadius="18px" // Optional: Adjust the border radius for a rounded effect
+                _hover={{ bg: "darkred", color: "white" }} // Change background and text color on hover
+              >
+                Login
             </Button>
-            <Button colorScheme="blue" variant="solid" onClick={scrollToPromotionCard}>
+            <Button
+             colorScheme="blue"
+              variant="solid" 
+              width="100px" 
+                height="35px"
+                borderRadius="18px"
+              // onClick={scrollToPromotionCard}
+              onClick={() => window.location.href = "https://buy.stripe.com/28o2aa0Cz9gN0zS5kF"} 
+              leftIcon={<FaUser />} // Adding the user icon to the left of the text
+              >
               Register
             </Button>
           </Box>
@@ -135,6 +155,8 @@ const HomePage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={controls}
             transition={{ duration: 2, delay: 0.6 }} // Animação mais lenta para o botão
+            _hover={{ bg: "white", color: "black" }}
+            borderRadius="13px"
           >
             Find out more
           </MotionButton>
@@ -181,19 +203,21 @@ const HomePage: React.FC = () => {
               variant="solid"
               size="sm"
               ml={2}
+              _hover={{ bg: "white", color: "black" }}
+              borderRadius="13px"
             >
               JOIN NOW
             </Button>
           </Text>
         </Box>
-        <VideoSection videoId="R_wXwRIddgo" />
+        <VideoSection videoId="IJZhPTCv_JE" />
 
        
 
         <Lifetime />
 
         <ExclusiveAccess />
-
+        
         <DoTheMath />
 
         <StudentTestimonials />

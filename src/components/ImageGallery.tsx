@@ -6,7 +6,6 @@ import { FaCircle, FaCircleNotch } from "react-icons/fa";
 import photo1 from "./images/photo1.jpg";
 import photo2 from "./images/photo2.jpg";
 import photo3 from "./images/photo3.jpg";
-import photo4 from "./images/photo4.jpg";
 import photo5 from "./images/photo5.jpg";
 import photo6 from "./images/photo6.jpg";
 import photo7 from "./images/photo7.jpg";
@@ -14,7 +13,11 @@ import photo8 from "./images/cert1.jpg";
 import photo9 from "./images/cert2.jpg";
 import photo10 from "./images/cert3.jpg";
 import photo11 from "./images/cert4.jpg";
-import photo12 from "./images/photo10.jpg"
+import photo12 from "./images/photo10.jpg";
+import photo13 from "./images/photo11.jpg";
+import photo14 from "./images/photo12.jpg";
+import photo15 from "./images/photo13.jpg";
+
 
 const ImageGallery: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -33,7 +36,11 @@ const ImageGallery: React.FC = () => {
     photo9,
     photo10,
     photo11,
-    photo12
+    photo12,
+    photo13,
+    photo14,
+    photo15,
+   
   ];
 
   const totalPages = Math.ceil(imageUrls.length / imagesPerPage);
