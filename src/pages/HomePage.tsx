@@ -120,7 +120,7 @@ const HomePage: React.FC = () => {
           height={buttonHeight} // Ajusta a altura dinamicamente
           fontSize={fontSize} // Ajusta o tamanho do texto dinamicamente
           borderRadius="18px"
-          onClick={() => window.location.href = "https://buy.stripe.com/28o2aa0Cz9gN0zS5kF"}
+          onClick={() => window.location.href = "https://whop.com/thetradingdojo/?pass=prod_Dz8nnP7lJ6k2v&plan=plan_V7gbzJqgrFCR5"}
           leftIcon={<FaUser size={iconSize} />} // Ajusta o tamanho do ícone dinamicamente
         >
           Register
