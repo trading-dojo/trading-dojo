@@ -1,143 +1,240 @@
-import React from "react";
-import { Box, Text, Button, keyframes, Flex } from "@chakra-ui/react";
-import { FaTelegramPlane } from "react-icons/fa";
-import img1 from "./images/back.jpg";
-
-// Define the pulse animation using Chakra UI's keyframes utility
-const pulseAnimation = keyframes`
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
+import React, { useState } from "react";
+import { Box, Text, Flex, Link, Icon } from "@chakra-ui/react";
+import { CheckIcon } from "@chakra-ui/icons"; // Importando o ícone de check
 
 const PromotionCard: React.FC = () => {
-  const handleButtonClick = () => {
-    window.location.href = "https://whop.com/thetradingdojo/";
-  };
+  const [selectedOption, setSelectedOption] = useState<"membership" | "mentorship">("membership");
+
+  // Conteúdo dos frames
+  const membershipOptions = [
+    {
+      title: "Monthly",
+      price: "$49.99 / month",
+      details: "Cancel subscription at any time",
+      features: [
+        "Daily Live Streams",
+        "Educational Resources",
+        "Trade Ideas & Market Analysis",
+        "Exclusive Discounts & Giveaways",
+        "Mentorships & 1to1",
+      ],
+      link: "https://whop.com/checkout/2jazRXEo7NHk938tpL-1u59-yZq2-HdTC-mlz3AfmCg7EO/"
+    },
+    {
+      title: "Custom",
+      price: "$119 / 3 months",
+      details: "Cancel subscription at any time",
+      features: [
+        "Daily Live Streams",
+        "Educational Resources",
+        "Trade Ideas & Market Analysis",
+        "Exclusive Discounts & Giveaways",
+        "Mentorships & 1to1",
+      ],
+      link: "https://whop.com/checkout/5tx5AtufRlH3zHQrzH-m65B-32wo-5iVx-6J1LstnreoH0/"
+    },
+    {
+      title: "Yearly",
+      price: "$400 / year",
+      details: "Cancel subscription at any time",
+      features: [
+        "Daily Live Streams",
+        "Educational Resources",
+        "Trade Ideas & Market Analysis",
+        "Exclusive Discounts & Giveaways",
+        "Mentorships & 1to1",
+      ],
+      link: "https://whop.com/checkout/3nvOHy5smDNlWZazD3-RnU5-lEhc-6SC2-VtVBcYxsJ8TW/"
+    },
+  ];
+
+  const mentorshipOptions = [
+    {
+      title: "Once Off",
+      price: "395 / month",
+      details: "Cancel subscription at any time",
+      features: [
+        "1 x 1 Hour 1 to 1 Session",
+        "Personalised Learning Plan",
+        "Lab Membership Included",
+        "Regular Progress Reviews",
+        "Ability to Purchase Additional Sessions at Discounted Rate",
+      ],
+      link: "https://whop.com/checkout/5whJS2aCYkm4s0LxTz-YKgL-C1UJ-fRBS-qdjAOSjtLRIp/"
+    },
+    {
+      title: "Monthly",
+      price: "$550 / months",
+      details: "Cancel subscription at any time",
+      features: [
+        "1 x 1 Hour 1 to 1 Session",
+        "Personalised Learning Plan",
+        "Lab Membership Included",
+        "Regular Progress Reviews",
+        "Ability to Purchase Additional Sessions at Discounted Rate",
+      ],
+      link: "https://whop.com/checkout/jA1p5EqlHuWkeKiCl-kAN6-3F50-FZT7-CE5ryblwcT4C/"
+    },
+    {
+      title: "Custom",
+      price: "2000 / year",
+      details: "Cancel subscription at any time",
+      features: [
+        "1 x 1 Hour 1 to 1 Session",
+        "Personalised Learning Plan",
+        "Lab Membership Included",
+        "Regular Progress Reviews",
+        "Ability to Purchase Additional Sessions at Discounted Rate",
+      ],
+      link: "https://whop.com/checkout/6ObvWx4ZEjO32BW0oN-EJMe-Cq6E-4bqB-PpknaaI2GWCl/"
+    },
+  ];
+
+  // Selecionar as opções com base no tipo
+  const selectedOptions = selectedOption === "membership" ? membershipOptions : mentorshipOptions;
 
   return (
     <Box
       width="100%"
-      height={["auto", "auto", "700px"]}
-      bgImage={`url(${img1})`}
+      height="800px"
       bgSize="cover"
       bgPosition="center"
       display="flex"
       justifyContent="center"
       alignItems="center"
       p={4}
-      position="relative"
       flexDirection="column"
+      position="relative"
     >
-      <Box
-        maxWidth={["95%", "85%", "585px"]}
-        height="auto"
-        bg="#191919"
-        color="white"
-        borderRadius="20px"
-        boxShadow="lg"
-        p={[4, 6]}
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        textAlign="center"
-        position="relative"
-        overflow="hidden"
-      >
-        <Text fontSize={["xl", "2xl", "3xl"]} fontWeight="bold" mb={6} color="white">
-          Get <span style={{ color: "#ff4d4d" }}> Lifetime Access</span> to the Trading Dojo Mentorship Program
+      {/* Linha para o Título e Switch de Alternância */}
+      <Flex justifyContent="space-between" alignItems="center" width="100%" mb={4}>
+        {/* Título dos Frames */}
+        <Text fontSize="32px" fontWeight="bold" color="white" mr={4}>
+          {selectedOption === "membership" ? "Membership Options" : "Mentorship Options"}
         </Text>
 
-        <Box textAlign="center">
+        {/* Switch de Alternância com Nomes */}
+        <Box
+          display="flex"
+          alignItems="center"
+          borderWidth="1px"
+          borderRadius="20px"
+          borderColor="black"
+          width="300px"
+          backgroundColor="gray.800"
+          position="relative"
+        >
+          {/* Sliding Indicator */}
           <Box
-            bgColor="#ff4d4d"
-            color="white"
-            borderRadius="30px"
-            width={["200px", "230px", "270px"]}
-            p={2}
-            mb={4}
+            position="absolute"
+            left={selectedOption === "membership" ? "0" : "50%"}
+            width="50%"
+            height="100%"
+            backgroundColor="red.600"
+            borderRadius="20"
+            transition="left 0.5s ease"
+            zIndex={0}
+          />
+
+          <Box
+            flex="1"
             textAlign="center"
-            mx="auto" // Centraliza o box dentro do container
+            onClick={() => setSelectedOption("membership")}
+            overflow="hidden"
+            position="relative"
+            zIndex={1}
           >
-            <Text fontSize={["lg", "xl", "2xl"]} fontWeight="bold">
-              SPECIAL PROMOTION
+            <Text color={selectedOption === "membership" ? "white" : "gray.300"} p={2} fontSize="20px">
+              Membership
             </Text>
           </Box>
-
-          <Text fontSize={["md", "lg"]} mb={4} color="white">
-            Get
-            <span style={{ color: "red", fontSize: "20px", padding: "0 4px", borderRadius: "4px", marginLeft: "10px" }}>
-              vip access
-            </span> to The Trading Dojo, was $49.99,
-          </Text>
-          <Text fontSize={["3xl", "4xl", "5xl"]} fontWeight="bold" mb={-2} color="#ff4d4d">
-            NOW 29.99
-          </Text>
-          <Text fontSize={["sm", "md"]} mt="20px" color="yellow.300">
-            Use code
-            <span style={{ color: "red", fontSize: "20px", fontWeight: "bold", padding: "0 4px", borderRadius: "4px", marginLeft: "10px" }}>
-              “Funded”
-            </span>
-            at checkout
-          </Text>
-        </Box>
-        <Button
-          colorScheme="red"
-          width={["250px", "300px", "400px"]}
-          mt="40px"
-          variant="solid"
-          size="lg"
-          borderRadius="full"
-          animation={`${pulseAnimation} 1.5s infinite`}
-          _hover={{ bg: "black" }}
-          onClick={handleButtonClick}
-        >
-          Get Access Now
-        </Button>
-      </Box>
-
-      <Box
-        width="100%"
-        maxWidth="712px"
-        textAlign="center"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        marginTop="20px"
-      >
-        <Flex align="center" mb={4}>
-          <FaTelegramPlane size={30} color="#ff4d4d" style={{ marginRight: '8px' }} />
-          <Text
-            fontSize={["md", "lg", "25px"]}
-            color="white"
-            fontWeight="bold"
-            display="inline"
+          <Box
+            flex="1"
+            textAlign="center"
+            onClick={() => setSelectedOption("mentorship")}
+            overflow="hidden"
+            position="relative"
+            zIndex={1}
           >
-            <span style={{ color: "white" }}>Take one second to join the </span>
-            <span style={{ color: "#ff4d4d" }}>FREE Telegram Channel</span>
-            <span style={{ color: "black" }}> so you never miss new free education and updates</span>
-          </Text>
-        </Flex>
-        <Button
-          as="a"
-          href="https://t.me/ictdojo"
-          target="_blank"
-          color="#ffffff"
-          bg="#ff4d4d"
-          variant="solid"
-          size="sm"
-          _hover={{ bg: "white", color: "black" }}
-        >
-          JOIN NOW
-        </Button>
-      </Box>
+            <Text color={selectedOption === "mentorship" ? "white" : "gray.300"} p={2} fontSize="20px">
+              Mentorship
+            </Text>
+          </Box>
+        </Box>
+      </Flex>
+
+      {/* Linha para os Frames de Conteúdo */}
+      <Flex justifyContent="space-between" width="100%" flexWrap="wrap" gap={4}>
+        {selectedOptions.map((option, index) => (
+          <Box
+            key={index}
+            width="30%"
+            height="520px"
+            p={4}
+            borderWidth={index === 1 ? "2px" : "1px"}
+            borderRadius="10px"
+            borderColor={index === 1 ? "red.500" : "#5c5b5b"}
+            textAlign="center"
+            backgroundColor="gray.700"
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+            transition="transform 0.3s, box-shadow 0.3s, z-index 0.3s" // Adicionando z-index à transição
+            zIndex={index === 1 ? 1 : 0} // Frame do meio com z-index maior
+            _hover={{
+              transform: "scale(1.05)", // Efeito de crescimento
+              boxShadow: "0 4px 20px rgba(255, 0, 0, 0.5)", // Efeito de sombra ao passar o mouse
+              backgroundColor: "rgba(255, 0, 0, 0.5)", // Cor ao passar o mouse
+              zIndex: 2, // Aumenta o z-index ao passar o mouse
+            }}
+          >
+            <Box>
+              <Text fontSize="24px" mb={2} color="#e00b0b">
+                {option.title}
+              </Text>
+              <Text fontSize="22px" fontWeight="bold" mb={2} color="gray.200">
+                {option.price}
+              </Text>
+              <Text fontSize="18px" color="gray.400">{option.details}</Text>
+            </Box>
+
+            {/* Link to Get Access com bordas e preenchimento ao passar o mouse */}
+            <Link
+              color="white"
+              href={option.link}
+              isExternal
+              fontWeight="bold"
+              border="1px solid red"
+              borderRadius="30px"
+              transition="background-color 0.3s"
+              backgroundColor={index === 1 ? "red" : "transparent"}
+              _hover={{
+                backgroundColor: "red",
+                color: "white",
+              }}
+              mt={4}
+              p={4}
+              display="inline-block"
+            >
+              Get Access
+            </Link>
+
+            {/* Features List */}
+            <Box mt={4} textAlign="left">
+              {option.features.map((feature, idx) => (
+                <Flex key={idx} alignItems="center" mb={4}>
+                  <Text fontSize="20px" fontWeight="bold" color="gray.300" mr={2}>
+                    {idx < 4 ? "✅" : <Icon as={CheckIcon} color="green.300" boxSize={4} />}
+                  </Text>
+                  <Text fontSize="20px" color="gray.300">
+                    {feature}
+                  </Text>
+                </Flex>
+              ))}
+            </Box>
+          </Box>
+        ))}
+      </Flex>
     </Box>
   );
 };

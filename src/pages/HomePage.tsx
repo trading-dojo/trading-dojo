@@ -3,21 +3,22 @@ import { Box, Image, Text, Button, useBreakpointValue, IconButton, Tooltip } fro
 import { FaTelegramPlane, FaDiscord, FaYoutube, FaArrowUp,FaInstagram } from "react-icons/fa";
 import img1 from "../components/images/background.jpg";
 import LoginPopup from "../components/LoginPopup";
-import TermsPopup from "../components/TermsPopup";
+import KlaviyoScriptLoader from "../components/KlaviyoScriptLoader";
 import logo from "../components/images/logo (2).png";
 import VideoSection from "../components/VideoSection";
 import Lifetime from "../components/Lifetime";
 import ExclusiveAccess from "../components/ExclusiveAccess";
 import DoTheMath from "../components/DoTheMath";
-import StudentTestimonials from "../components/StudentTestimonials";
 import VideoGallery from "../components/VideoGallery";
 import PromotionCard from "../components/PromotionCard";
 import RiskNotice from "../components/RiskNotice";
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 import Footer from "../components/Footer";
 // import ResultsSection from "../components/ImageGallery";
 import ImageGallery from "../components/ImageGallery";
 import { motion, useAnimation } from "framer-motion";
 import { FaUser } from "react-icons/fa";
+import FAQ from "../components/FAQ";
 
 
 const MotionText = motion(Text);
@@ -44,7 +45,7 @@ const HomePage: React.FC = () => {
     }
   };
 
-  const bannerTextSize = useBreakpointValue({ base: "24px", md: "32px", lg: "40px" });
+  const bannerTextSize = useBreakpointValue({ base: "26px", md: "38px", lg: "48px" });
   const bannerButtonSize = useBreakpointValue({ base: "sm", md: "md" });
   const bannerPadding = useBreakpointValue({ base: "2", md: "4" });
   const bannerTop = useBreakpointValue({ base: "20%", md: "30%" });
@@ -60,7 +61,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div ref={homeRef}> {/* Referência ao topo da página */}
-      <Box position="relative" width="100%" height="590px">
+      <Box position="relative" bgColor="#0B0B0B" width="100%" height="100vh">
         <Box
           position="absolute"
           top={3}
@@ -102,50 +103,52 @@ const HomePage: React.FC = () => {
           </Box>
         </Box>
 
-        <Image
+        {/* <Image
           src={img1}
           alt="Banner"
           objectFit="cover"
           width="100%"
-          height="590px"
+          height="100%"
           style={{ filter: "brightness(40%)" }}
-        />
+        /> */}
 
         <Box
           position="absolute"
           top={bannerTop}
-          left={bannerLeft}
-          p={bannerPadding}
+          left="0" // Adiciona centralização horizontal
+          right="0" // Adiciona centralização horizontal
+          margin="auto" // Garante que ele fique centralizado
+          justifyContent="center"
           display="flex"
           flexDirection="column"
-          alignItems="flex-start"
+          alignItems="center"
           borderRadius="md"
           width="auto"
           maxWidth="400px"
         >
           <MotionText
-            fontSize={bannerTextSize}
-            fontWeight="bold"
-            mb={4}
-            textAlign="left"
-            initial={{ opacity: 0, y: 20 }}
-            animate={controls}
-            transition={{ duration: 2, delay: 0.2 }} // Animação mais lenta
-          >
-            <span style={{ color: "white" }}>Join the best </span>
-            <span style={{ color: "#ff4d4d" }}>smart money</span>
-            <span style={{ color: "white" }}> community in the <span style={{ color: "#ff4d4d" }}>world</span></span>
+              fontSize={["24px", "32px", "40px", "48px"]} // Tamanhos de fonte para diferentes larguras de tela
+              fontWeight="bold"
+              mb={4}
+              textAlign="center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={controls}
+              transition={{ duration: 2, delay: 0.2 }} // Animação mais lenta
+            >
+              <span style={{ color: "#ff4d4d" }}>THE TRADING DOJO</span>
           </MotionText>
+
           <MotionText
-            fontSize="lg"
-            mb={4}
-            color="white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={controls}
-            transition={{ duration: 2, delay: 0.4 }} // Animação mais lenta
-          >
-            Don’t fall for the get rich quick schemes!
-          </MotionText>
+              fontSize={["20px", "25px", "30px", "30px"]} // Tamanhos responsivos para diferentes larguras de tela
+              mb={8}
+              color="white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={controls}
+              transition={{ duration: 2, delay: 0.4 }}
+            >
+              I made it happen and so can you. turn your 9-5 to 10-11
+         </MotionText>
+
           <MotionButton
             color="#ffffff"
             bg="#ff4d4d"
@@ -157,6 +160,7 @@ const HomePage: React.FC = () => {
             transition={{ duration: 2, delay: 0.6 }} // Animação mais lenta para o botão
             _hover={{ bg: "white", color: "black" }}
             borderRadius="13px"
+            rightIcon={<ArrowForwardIcon />}
           >
             Find out more
           </MotionButton>
@@ -165,8 +169,8 @@ const HomePage: React.FC = () => {
 
       {isLoginModalOpen && <LoginPopup onClose={closeLoginModal} />}
       
-      <Box width="200px">
-        <TermsPopup /> {/* Popup de termos */}
+      <Box>
+        <KlaviyoScriptLoader /> {/* Popup de termos */}
       </Box>
 
       <Box
@@ -220,20 +224,24 @@ const HomePage: React.FC = () => {
         
         <DoTheMath />
 
-        <StudentTestimonials />
-        
-
         {/* <VideoGallery /> */}
 
         
 
-        <Box ref={promotionCardRef} width="100%">
+        <Box ref={promotionCardRef} width="80%">
           <PromotionCard />
         </Box>
 
         <ImageGallery/>
 
         <RiskNotice />
+
+        <Box  width="70%">
+
+        <FAQ/>
+        
+        </Box>
+        
 
         <Footer />
       </Box>
