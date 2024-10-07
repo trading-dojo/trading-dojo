@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import { Box, Text, Flex, Link, Icon } from "@chakra-ui/react";
-import { CheckIcon } from "@chakra-ui/icons"; // Importando o ícone de check
+import { Box, Text, Flex, Link, Icon, useBreakpointValue } from "@chakra-ui/react";
+import { CheckIcon } from "@chakra-ui/icons";
 
 const PromotionCard: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<"membership" | "mentorship">("membership");
 
-  // Conteúdo dos frames
+  // Ajustar os valores com base no tamanho da tela
+  const fontSizeTitle = useBreakpointValue({ base: "18px", md: "32px" });
+  const fontSizeOption = useBreakpointValue({ base: "14px", md: "20px" });
+  const cardWidth = useBreakpointValue({ base: "100%", md: "30%" });
+  const cardHeight = useBreakpointValue({ base: "auto", md: "520px" });
+  const paddingValue = useBreakpointValue({ base: "2", md: "4" });
+  
   const membershipOptions = [
     {
       title: "Monthly",
@@ -90,13 +96,11 @@ const PromotionCard: React.FC = () => {
     },
   ];
 
-  // Selecionar as opções com base no tipo
   const selectedOptions = selectedOption === "membership" ? membershipOptions : mentorshipOptions;
 
   return (
     <Box
       width="100%"
-      height="800px"
       bgSize="cover"
       bgPosition="center"
       display="flex"
@@ -109,7 +113,7 @@ const PromotionCard: React.FC = () => {
       {/* Linha para o Título e Switch de Alternância */}
       <Flex justifyContent="space-between" alignItems="center" width="100%" mb={4}>
         {/* Título dos Frames */}
-        <Text fontSize="32px" fontWeight="bold" color="white" mr={4}>
+        <Text fontSize={fontSizeTitle} fontWeight="bold" color="white" mr={4}>
           {selectedOption === "membership" ? "Membership Options" : "Mentorship Options"}
         </Text>
 
@@ -130,12 +134,11 @@ const PromotionCard: React.FC = () => {
             left={selectedOption === "membership" ? "0" : "50%"}
             width="50%"
             height="100%"
-            backgroundColor="red.600"
+            backgroundColor="#01baef"
             borderRadius="20"
             transition="left 0.5s ease"
             zIndex={0}
           />
-
           <Box
             flex="1"
             textAlign="center"
@@ -144,7 +147,7 @@ const PromotionCard: React.FC = () => {
             position="relative"
             zIndex={1}
           >
-            <Text color={selectedOption === "membership" ? "white" : "gray.300"} p={2} fontSize="20px">
+            <Text color={selectedOption === "membership" ? "white" : "gray.300"} p={2} fontSize={fontSizeOption}>
               Membership
             </Text>
           </Box>
@@ -156,7 +159,7 @@ const PromotionCard: React.FC = () => {
             position="relative"
             zIndex={1}
           >
-            <Text color={selectedOption === "mentorship" ? "white" : "gray.300"} p={2} fontSize="20px">
+            <Text color={selectedOption === "mentorship" ? "white" : "gray.300"} p={2} fontSize={fontSizeOption}>
               Mentorship
             </Text>
           </Box>
@@ -168,46 +171,46 @@ const PromotionCard: React.FC = () => {
         {selectedOptions.map((option, index) => (
           <Box
             key={index}
-            width="30%"
-            height="520px"
-            p={4}
+            width={cardWidth}
+            height={cardHeight}
+            p={paddingValue}
             borderWidth={index === 1 ? "2px" : "1px"}
             borderRadius="10px"
-            borderColor={index === 1 ? "red.500" : "#5c5b5b"}
+            borderColor={index === 1 ? "#01baef" : "#01baef"}
             textAlign="center"
-            backgroundColor="gray.700"
+            backgroundColor="black"
             display="flex"
             flexDirection="column"
             justifyContent="space-between"
-            transition="transform 0.3s, box-shadow 0.3s, z-index 0.3s" // Adicionando z-index à transição
-            zIndex={index === 1 ? 1 : 0} // Frame do meio com z-index maior
+            transition="transform 0.3s, box-shadow 0.3s, z-index 0.3s"
+            zIndex={index === 1 ? 1 : 0}
             _hover={{
-              transform: "scale(1.05)", // Efeito de crescimento
-              boxShadow: "0 4px 20px rgba(255, 0, 0, 0.5)", // Efeito de sombra ao passar o mouse
-              backgroundColor: "rgba(255, 0, 0, 0.5)", // Cor ao passar o mouse
-              zIndex: 2, // Aumenta o z-index ao passar o mouse
+              transform: "scale(1.05)",
+              boxShadow: "0 4px 20px rgba(0, 0, 255, 0.5)",
+              backgroundColor: "black",
+              zIndex: 2,
             }}
           >
             <Box>
-              <Text fontSize="24px" mb={2} color="#e00b0b">
+              <Text fontSize="24px" mb={2} color="#01baef">
                 {option.title}
               </Text>
-              <Text fontSize="22px" fontWeight="bold" mb={2} color="gray.200">
+              <Text fontSize="22px" fontWeight="bold" mb={2} color="white">
                 {option.price}
               </Text>
               <Text fontSize="18px" color="gray.400">{option.details}</Text>
             </Box>
 
-            {/* Link to Get Access com bordas e preenchimento ao passar o mouse */}
+            {/* Link to Get Access */}
             <Link
-              color="white"
+              color={index === 1 ? "black" : "#01baef"}
               href={option.link}
               isExternal
               fontWeight="bold"
-              border="1px solid red"
+              border="1px solid #01baef"
               borderRadius="30px"
               transition="background-color 0.3s"
-              backgroundColor={index === 1 ? "red" : "transparent"}
+              backgroundColor={index === 1 ? "#01baef" : "transparent"}
               _hover={{
                 backgroundColor: "red",
                 color: "white",
@@ -223,10 +226,8 @@ const PromotionCard: React.FC = () => {
             <Box mt={4} textAlign="left">
               {option.features.map((feature, idx) => (
                 <Flex key={idx} alignItems="center" mb={4}>
-                  <Text fontSize="20px" fontWeight="bold" color="gray.300" mr={2}>
-                    {idx < 4 ? "✅" : <Icon as={CheckIcon} color="green.300" boxSize={4} />}
-                  </Text>
-                  <Text fontSize="20px" color="gray.300">
+                  <Text fontSize="14px" color="white" ml={2}>
+                    <Icon as={CheckIcon} color="#01baef" />
                     {feature}
                   </Text>
                 </Flex>

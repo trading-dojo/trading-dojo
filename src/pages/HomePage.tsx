@@ -19,6 +19,7 @@ import ImageGallery from "../components/ImageGallery";
 import { motion, useAnimation } from "framer-motion";
 import { FaUser } from "react-icons/fa";
 import FAQ from "../components/FAQ";
+import Navbar from "../components/Navbar";
 
 
 const MotionText = motion(Text);
@@ -51,6 +52,17 @@ const HomePage: React.FC = () => {
   const bannerTop = useBreakpointValue({ base: "20%", md: "30%" });
   const bannerLeft = useBreakpointValue({ base: "5%", md: "10%", lg: "15%" });
 
+  // Usando useBreakpointValue para tornar os tamanhos dinâmicos com base no tamanho da tela
+  const boxHeight = useBreakpointValue({ base: "50px", md: "60px" });
+  const logoSize = useBreakpointValue({ base: "120px", md: "200px" });
+  const buttonWidth = useBreakpointValue({ base: "80px", md: "100px" });
+  const buttonHeight = useBreakpointValue({ base: "30px", md: "35px" });
+  const padding = useBreakpointValue({ base: "2", md: "4" });
+    
+    // Tamanho dinâmico para o texto e ícones
+    const fontSize = useBreakpointValue({ base: "12px", md: "16px" });
+    const iconSize = useBreakpointValue({ base: "14px", md: "20px" });
+
   // Controle da animação
   const controls = useAnimation();
 
@@ -61,47 +73,60 @@ const HomePage: React.FC = () => {
 
   return (
     <div ref={homeRef}> {/* Referência ao topo da página */}
-      <Box position="relative" bgColor="#0B0B0B" width="100%" height="100vh">
+      <Box position="relative"  bgColor="#0B0B0B" width="100%" height="100vh">
+
+        <Navbar/>
         <Box
-          position="absolute"
-          top={3}
-          left={0}
-          right={0}
-          p={2}
-          height="60px"
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          zIndex={1}
+      position="fixed"
+      h={14}
+      top={0}
+      left="10px"
+      right="10px"
+      p={padding} // Ajusta o padding dinamicamente
+      height={boxHeight} // Ajusta a altura da navbar dinamicamente
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+      zIndex={1000}
+      maxWidth="1200px"
+      margin="0 auto"
+      backgroundColor="black"
+      boxShadow="0px 4px 8px rgba(0, 0, 0, 0.3)"
+    >
+      <Image
+        src={logo} // Substitua pelo caminho correto do logo
+        alt="Logo"
+        boxSize={logoSize} // Ajusta o tamanho do logo dinamicamente
+        objectFit="contain"
+      />
+      <Box display="flex">
+        <Button
+          colorScheme="red"
+          variant="solid"
+          onClick={openLoginModal}
+          mr={2}
+          width={buttonWidth} // Ajusta a largura dinamicamente
+          height={buttonHeight} // Ajusta a altura dinamicamente
+          fontSize={fontSize} // Ajusta o tamanho do texto dinamicamente
+          borderRadius="18px"
+          _hover={{ bg: "darkred", color: "white" }}
         >
-          <Image src={logo} alt="Logo" boxSize="200px" objectFit="contain" />
-          <Box display="flex">
-          <Button
-                colorScheme="red"
-                variant="solid"
-                onClick={openLoginModal}
-                mr={2}
-                width="100px" 
-                height="35px"
-                borderRadius="18px" // Optional: Adjust the border radius for a rounded effect
-                _hover={{ bg: "darkred", color: "white" }} // Change background and text color on hover
-              >
-                Login
-            </Button>
-            <Button
-             colorScheme="blue"
-              variant="solid" 
-              width="100px" 
-                height="35px"
-                borderRadius="18px"
-              // onClick={scrollToPromotionCard}
-              onClick={() => window.location.href = "https://buy.stripe.com/28o2aa0Cz9gN0zS5kF"} 
-              leftIcon={<FaUser />} // Adding the user icon to the left of the text
-              >
-              Register
-            </Button>
-          </Box>
-        </Box>
+          Login
+        </Button>
+        <Button
+          colorScheme="blue"
+          variant="solid"
+          width={buttonWidth} // Ajusta a largura dinamicamente
+          height={buttonHeight} // Ajusta a altura dinamicamente
+          fontSize={fontSize} // Ajusta o tamanho do texto dinamicamente
+          borderRadius="18px"
+          onClick={() => window.location.href = "https://buy.stripe.com/28o2aa0Cz9gN0zS5kF"}
+          leftIcon={<FaUser size={iconSize} />} // Ajusta o tamanho do ícone dinamicamente
+        >
+          Register
+        </Button>
+      </Box>
+    </Box>
 
         {/* <Image
           src={img1}
@@ -115,40 +140,45 @@ const HomePage: React.FC = () => {
         <Box
           position="absolute"
           top={bannerTop}
-          left="0" // Adiciona centralização horizontal
-          right="0" // Adiciona centralização horizontal
-          margin="auto" // Garante que ele fique centralizado
+          left="0"
+          right="0"
+          margin="auto"
           justifyContent="center"
           display="flex"
-          flexDirection="column"
+          flexDirection="column" // Alinha os elementos verticalmente (em "rows")
           alignItems="center"
           borderRadius="md"
-          width="auto"
-          maxWidth="400px"
+          width="100%"
+          maxWidth="1000px"
         >
+          {/* Primeiro Row: THE DOJO */}
           <MotionText
-              fontSize={["24px", "32px", "40px", "48px"]} // Tamanhos de fonte para diferentes larguras de tela
-              fontWeight="bold"
-              mb={4}
-              textAlign="center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={controls}
-              transition={{ duration: 2, delay: 0.2 }} // Animação mais lenta
-            >
-              <span style={{ color: "#ff4d4d" }}>THE TRADING DOJO</span>
+            fontSize={["24px", "32px", "40px", "58px"]} // Tamanhos de fonte para diferentes larguras de tela
+            fontWeight="bold"
+            mt="70px"
+            mb={1}
+            textAlign="center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            transition={{ duration: 2, delay: 0.2 }}
+          >
+            <span style={{ color: "#fd0000" }}>THE DOJO</span>
           </MotionText>
 
+          {/* Segundo Row: Texto abaixo */}
           <MotionText
-              fontSize={["20px", "25px", "30px", "30px"]} // Tamanhos responsivos para diferentes larguras de tela
-              mb={8}
-              color="white"
-              initial={{ opacity: 0, y: 20 }}
-              animate={controls}
-              transition={{ duration: 2, delay: 0.4 }}
-            >
-              I made it happen and so can you. turn your 9-5 to 10-11
-         </MotionText>
+            fontSize={["10px", "14px", "18px", "20px"]} // Tamanhos responsivos para diferentes larguras de tela
+            color="white"
+            textAlign="center" // Centraliza o texto
+            mb="40px"
+            initial={{ opacity: 0, y: 20 }}
+            animate={controls}
+            transition={{ duration: 2, delay: 0.4 }}
+          >
+            I made it happen and so can you. Turn your 9-5 to 10-11
+          </MotionText>
 
+          {/* Terceiro Row: Botão */}
           <MotionButton
             color="#ffffff"
             bg="#ff4d4d"
@@ -157,14 +187,15 @@ const HomePage: React.FC = () => {
             onClick={scrollToPromotionCard}
             initial={{ opacity: 0, y: 20 }}
             animate={controls}
-            transition={{ duration: 2, delay: 0.6 }} // Animação mais lenta para o botão
+            transition={{ duration: 2, delay: 0.6 }}
             _hover={{ bg: "white", color: "black" }}
             borderRadius="13px"
             rightIcon={<ArrowForwardIcon />}
           >
-            Find out more
+            Join Now
           </MotionButton>
         </Box>
+
       </Box>
 
       {isLoginModalOpen && <LoginPopup onClose={closeLoginModal} />}
