@@ -18,24 +18,24 @@ const PromotionCard: React.FC = () => {
       price: "$49.99 / month",
       details: "Cancel subscription at any time",
       features: [
-        "Daily Live Streams",
+        "Weekly live streams",
         "Educational Resources",
         "Trade Ideas & Market Analysis",
-        "Exclusive Discounts & Giveaways",
-        "Mentorships & 1to1",
+        "Prop firm giveaways",
+        "Mentorship & mastermind calls",
       ],
       link: "https://whop.com/checkout/2jazRXEo7NHk938tpL-1u59-yZq2-HdTC-mlz3AfmCg7EO/"
     },
     {
-      title: "Custom",
+      title: "Quarterly",
       price: "$119 / 3 months",
       details: "Cancel subscription at any time",
       features: [
-        "Daily Live Streams",
+        "Weekly live streams",
         "Educational Resources",
         "Trade Ideas & Market Analysis",
-        "Exclusive Discounts & Giveaways",
-        "Mentorships & 1to1",
+        "Prop firm giveaways",
+        "Mentorship & mastermind calls",
       ],
       link: "https://whop.com/checkout/5tx5AtufRlH3zHQrzH-m65B-32wo-5iVx-6J1LstnreoH0/"
     },
@@ -44,11 +44,11 @@ const PromotionCard: React.FC = () => {
       price: "$400 / year",
       details: "Cancel subscription at any time",
       features: [
-        "Daily Live Streams",
+        "Weekly live streams",
         "Educational Resources",
         "Trade Ideas & Market Analysis",
-        "Exclusive Discounts & Giveaways",
-        "Mentorships & 1to1",
+        "Prop firm giveaways",
+        "Mentorship & mastermind calls",
       ],
       link: "https://whop.com/checkout/3nvOHy5smDNlWZazD3-RnU5-lEhc-6SC2-VtVBcYxsJ8TW/"
     },
@@ -56,7 +56,7 @@ const PromotionCard: React.FC = () => {
 
   const mentorshipOptions = [
     {
-      title: "Once Off",
+      title: "Monthly",
       price: "395 / month",
       details: "Cancel subscription at any time",
       features: [
@@ -69,20 +69,20 @@ const PromotionCard: React.FC = () => {
       link: "https://whop.com/checkout/5whJS2aCYkm4s0LxTz-YKgL-C1UJ-fRBS-qdjAOSjtLRIp/"
     },
     {
-      title: "Monthly",
+      title: "Quarterly",
       price: "$550 / months",
       details: "Cancel subscription at any time",
       features: [
-        "1 x 1 Hour 1 to 1 Session",
-        "Personalised Learning Plan",
-        "Lab Membership Included",
-        "Regular Progress Reviews",
-        "Ability to Purchase Additional Sessions at Discounted Rate",
+        "Access to membership content",
+        "Personalised models",
+        "3 weekly 1on1 calls ",
+        "1on1 live trading",
+        "Regular progress reviews",
       ],
       link: "https://whop.com/checkout/jA1p5EqlHuWkeKiCl-kAN6-3F50-FZT7-CE5ryblwcT4C/"
     },
     {
-      title: "Custom",
+      title: "Yearly",
       price: "2000 / year",
       details: "Cancel subscription at any time",
       features: [
