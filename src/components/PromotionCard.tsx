@@ -62,7 +62,7 @@ const PromotionCard: React.FC = () => {
       features: [
         "1 x 1 Hour 1 to 1 Session",
         "Personalised Learning Plan",
-        "Lab Membership Included",
+        "DOJO membership included",
         "Regular Progress Reviews",
         "Ability to Purchase Additional Sessions at Discounted Rate",
       ],
@@ -88,7 +88,7 @@ const PromotionCard: React.FC = () => {
       features: [
         "1 x 1 Hour 1 to 1 Session",
         "Personalised Learning Plan",
-        "Lab Membership Included",
+        "DOJO membership included",
         "Regular Progress Reviews",
         "Ability to Purchase Additional Sessions at Discounted Rate",
       ],
