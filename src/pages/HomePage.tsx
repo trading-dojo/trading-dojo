@@ -357,7 +357,7 @@ const HomePage: React.FC = () => {
         <Tooltip label="YouTube" placement="left" hasArrow>
           <IconButton
             as="a"
-            href="https://www.youtube.com/channel/UCA9-QoaGf6wRskd5DlU3Ojw"
+            href="https://www.youtube.com/@TheTradingDojo"
             target="_blank"
             aria-label="YouTube"
             icon={<FaYoutube />}
