@@ -17,6 +17,7 @@ import photo12 from "./images/photo10.jpg";
 import photo13 from "./images/photo11.jpg";
 import photo14 from "./images/photo12.jpg";
 import photo15 from "./images/photo13.jpg";
+import photo16 from "./images/markCert.jpg";
 
 
 const ImageGallery: React.FC = () => {
@@ -40,6 +41,7 @@ const ImageGallery: React.FC = () => {
     photo13,
     photo14,
     photo15,
+    photo16,
    
   ];
 
