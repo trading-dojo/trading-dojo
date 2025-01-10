@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Box, Image, Text, Button, useBreakpointValue, IconButton, Tooltip } from "@chakra-ui/react";
 import { FaTelegramPlane, FaDiscord, FaYoutube, FaArrowUp,FaInstagram } from "react-icons/fa";
-import img1 from "../components/images/background.jpg";
+import img1 from "../components/images/Green-EPSCC10_generated.jpg";
 import LoginPopup from "../components/LoginPopup";
 import KlaviyoScriptLoader from "../components/KlaviyoScriptLoader";
 import logo from "../components/images/logo (2).png";
@@ -20,7 +20,6 @@ import { motion, useAnimation } from "framer-motion";
 import { FaUser } from "react-icons/fa";
 import FAQ from "../components/FAQ";
 import Navbar from "../components/Navbar";
-
 
 const MotionText = motion(Text);
 const MotionButton = motion(Button);
@@ -128,14 +127,14 @@ const HomePage: React.FC = () => {
       </Box>
     </Box>
 
-        {/* <Image
+        <Image
           src={img1}
           alt="Banner"
           objectFit="cover"
           width="100%"
           height="100%"
-          style={{ filter: "brightness(40%)" }}
-        /> */}
+          style={{ filter: "brightness(20%)" }}
+        />
 
         <Box
           position="absolute"

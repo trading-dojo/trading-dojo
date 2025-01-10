@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, IconButton, Image, Text, Heading } from "@chakra-ui/react";
 import { FaCircle, FaCircleNotch } from "react-icons/fa";
 
+
 // Importar imagens diretamente
 import photo1 from "./images/photo1.jpg";
 import photo2 from "./images/photo2.jpg";
